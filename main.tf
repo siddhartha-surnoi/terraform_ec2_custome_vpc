@@ -1,0 +1,25 @@
+####################################################
+# Security Group Module
+####################################################
+module "security_groups" {
+  source        = "./modules/sg"
+  vpc_id        = data.aws_vpc.custom.id
+  allowed_cidr  = var.allowed_cidr
+  sg_config     = var.security_groups
+  project_name  = var.project_name
+  tags          = local.common_tags
+}
+
+####################################################
+# EC2 Module
+####################################################
+module "ec2_instances" {
+  source               = "./modules/ec2"
+  ami_id               = data.aws_ami.devops_team_ami.id
+  instance_conf        = var.instance_configs
+  sg_ids               = module.security_groups.sg_ids
+  subnet_id            = data.aws_subnet.public_subnet.id
+  project_name         = var.project_name
+  iam_instance_profile = var.iam_instance_profile
+  tags                 = local.common_tags
+}

@@ -1,0 +1,5 @@
+project_name        = "Logistics"
+environment         = "dev"
+vpc_id              = "vpc-0086f34dccaccfc5c"
+public_subnet_id    = "subnet-073ee0ce14a600ea9"
+iam_instance_profile = "IAM-ECR-Role"
