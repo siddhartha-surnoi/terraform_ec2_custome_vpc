@@ -47,5 +47,6 @@ module "ec2_instances" {
   subnet_id            = local.public_subnet_id
   project_name         = var.project_name
   iam_instance_profile = var.iam_instance_profile
+  key_name           = var.key_name
   tags                 = local.common_tags
 }

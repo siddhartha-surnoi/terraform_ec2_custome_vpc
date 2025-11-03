@@ -43,6 +43,12 @@ variable "environment" {
 #   default     = local.public_subnet_id
 # }
 
+variable "key_name" {
+  description = "Key pair name to use for EC2 instances"
+  type        = string
+  default     = "logistics-mot-kp" # Replace with your actual key name in AWS
+}
+
 
 variable "allowed_cidr" {
   description = "Allowed CIDR for inbound traffic"

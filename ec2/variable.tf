@@ -11,3 +11,7 @@ variable "iam_instance_profile" {
   type        = string
   default     = ""
 }
+variable "key_name" {
+  description = "Key pair name for EC2 instance login"
+  type        = string
+}
