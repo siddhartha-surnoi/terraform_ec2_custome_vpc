@@ -13,7 +13,7 @@ variable "region" {
 variable "project_name" {
   description = "Project name prefix for all resources"
   type        = string
-  default     = "fusioniq"
+  default     = "Logistics"
 }
 
 variable "environment" {
@@ -22,11 +22,11 @@ variable "environment" {
   default     = "dev"
 }
 
-variable "developed_by" {
-  description = "Developer or maintainer name"
-  type        = string
-  default     = "Siddhartha"
-}
+# variable "developed_by" {
+#   description = "Developer or maintainer name"
+#   type        = string
+#   default     = "Siddhartha"
+# }
 
 ####################################################
 # Networking Configuration
@@ -82,9 +82,9 @@ variable "security_groups" {
   }))
 
   default = {
-    aiml = {
+    jenkins = {
       desc  = "Security group for AIML servers"
-      ports = [22, 6379, 8000, 8001, 8002, 8003]
+      ports = [22, 8080]
     }
   }
 }
@@ -102,11 +102,11 @@ variable "instance_configs" {
   }))
 
   default = {
-    AIML = {
-      instance_type  = "g4dn.xlarge"
+    jenkins = {
+      instance_type  = "t3a.medium"
       volume_size    = 30
       user_data_path = "script/aiml_script.sh"
-      security_group = "aiml"
+      security_group = "jenkins"
     }
   }
 }

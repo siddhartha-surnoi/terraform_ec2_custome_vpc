@@ -6,6 +6,7 @@ locals {
     Project     = var.project_name
     Environment = var.environment
     ManagedBy   = "Terraform"
-    DevelopedBy = var.developed_by
+    Owner       = "DevOpsTeam"
+    # DevelopedBy = var.developed_by
   }
 }
