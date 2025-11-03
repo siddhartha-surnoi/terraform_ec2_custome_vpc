@@ -22,4 +22,3 @@ module "ec2_instances" {
   project_name         = var.project_name
   iam_instance_profile = var.iam_instance_profile
   tags                 = local.common_tags
-}
