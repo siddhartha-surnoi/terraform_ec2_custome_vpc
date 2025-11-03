@@ -31,17 +31,17 @@ variable "environment" {
 ####################################################
 # Networking Configuration
 ####################################################
-variable "vpc_id" {
-  description = "Custom VPC ID where EC2 and SGs will be created"
-  type        = string
-  default     = local.vpc_id
-}
+# variable "vpc_id" {
+#   description = "Custom VPC ID where EC2 and SGs will be created"
+#   type        = string
+#   default     = local.vpc_id
+# }
 
-variable "public_subnet_id" {
-  description = "Public Subnet ID for EC2 instances"
-  type        = string
-  default     = local.public_subnet_id
-}
+# variable "public_subnet_id" {
+#   description = "Public Subnet ID for EC2 instances"
+#   type        = string
+#   default     = local.public_subnet_id
+# }
 
 
 variable "allowed_cidr" {

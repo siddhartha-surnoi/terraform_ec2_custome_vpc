@@ -1,13 +1,3 @@
-####################################################
-# Fetch Custom VPC & Subnet
-####################################################
-data "aws_vpc" "custom" {
-  id = var.vpc_id
-}
-
-data "aws_subnet" "public_subnet" {
-  id = var.public_subnet_id
-}
 
 ####################################################
 # Fetch Latest Custom AMI
