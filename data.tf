@@ -30,4 +30,3 @@ data "aws_ami" "devops_team_ami" {
     name   = "architecture"
     values = ["x86_64"]
   }
-}
