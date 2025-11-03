@@ -105,7 +105,7 @@ variable "instance_configs" {
     jenkins = {
       instance_type  = "t3a.medium"
       volume_size    = 30
-      user_data_path = "script/aiml_script.sh"
+      user_data_path = "script/jenkins_master.sh"
       security_group = "jenkins"
     }
   }
