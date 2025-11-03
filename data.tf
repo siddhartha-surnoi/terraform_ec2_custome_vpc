@@ -31,4 +31,3 @@ data "aws_ami" "devops_team_ami" {
     values = ["x86_64"]
   }
 }
-
